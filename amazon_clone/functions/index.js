@@ -16,6 +16,7 @@ const { onRequest } = require("firebase-functions/v2/https");
 const logger = require("firebase-functions/logger");
 
 const app = express();
+setGlobalOptions({maxInstances:10});
 app.use(cors({ origion: true }));
 
 app.use(express.json());
